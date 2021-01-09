@@ -146,6 +146,12 @@ button {
   outline: none;
 }
 
+dd,
+dt,
+dl {
+  margin: 0;
+}
+
 .sr-only {
   position: absolute;
   top: -9999px;

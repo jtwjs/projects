@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap");
 
 body {
   font-family: "Poppins", sans-serif;
@@ -91,7 +91,7 @@ body {
 }
 
 /* Home */
-section {
+.section {
   width: 100%;
   height: 100vh;
 }
@@ -177,7 +177,7 @@ section .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 3rem;
-  padding: 3rem 0;
+  padding: 3rem;
 }
 
 .content {
@@ -187,7 +187,7 @@ section .container {
   color: #fff;
 }
 
-.title {
+.about .title {
   position: relative;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
@@ -213,4 +213,45 @@ section .container {
 .img-container img {
   width: 100%;
   height: 100%;
+}
+
+/* Section line */
+.section-line {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 30vh;
+  color: #fff;
+  text-align: center;
+  background-image: url(../assets/images/line-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0% 100%;
+}
+
+.section-line .container {
+  display: flex;
+  justify-content: center;
+}
+
+.section-line .title {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.section-line .title h2 {
+  width: 80%;
+  margin: 0 auto;
+  border-top: 1.5px solid rgba(255, 255, 255, 0.7);
+  padding-top: 1rem;
+}
+
+.title-desc {
+  margin-bottom: 1rem;
+  font-size: 0.6rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  word-spacing: 0.05rem;
+  letter-spacing: 0.2rem;
+  opacity: 0.6;
 }
