@@ -217,6 +217,7 @@ section .container {
 
 /* Section line */
 .section-line {
+  position: relative;
   display: flex;
   align-items: center;
   width: 100%;
@@ -226,12 +227,23 @@ section .container {
   background-image: url(../assets/images/line-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0% 100%;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.section-line::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  opacity: 0.65;
 }
 
 .section-line .container {
   display: flex;
   justify-content: center;
+  z-index: 2;
 }
 
 .section-line .title {
