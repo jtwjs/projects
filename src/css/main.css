@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+#main {
+  width: 100%;
+}
+
+.home {
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.home img {
+  position: absolute;
+}
+
+.mountine1 {
+  bottom: 0;
+  right: 0;
+  width: 1600px;
+  z-index: 9;
+}
+
+.mountine2 {
+  bottom: 0;
+  left: 0;
+  width: 1000px;
+  z-index: 8;
+}
+
+.sky {
+  top: 0;
+  width: 1600px;
+  z-index: 7;
+}
+
+.person {
+  bottom: 0;
+  width: 400px;
+  z-index: 10;
+}
