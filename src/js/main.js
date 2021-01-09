@@ -18,17 +18,21 @@
                 shadow_height: [0, 1, {start: 0, end: 0.5}],
                 aboutContainer_opacity: [0, 1, {start: 0.2, end: 0.5}],
                 aboutContainer_translateY: [0, 1, {start: 0.2, end: 0.5 }],
-                border_translate: [0, 1, {start: 0.3, end: 0.9 }],
-
-            }
-    }, {
-            sectionType: 'line',
-            scrollHeight: 0,
-            objs: {
+                border_translate: [0, 1, {start: 0.3, end: 0.99 }],
 
             }
     }, {
             sectionType: 'normal',
+            scrollHeight: 0,
+            objs: {
+                lineContainerElm: document.querySelector('.section-line .container'),
+            },
+            values: {
+                lineContainer_opacity: [0, 1, {start: 0.1, end: 0.3}],
+            }
+            
+    }, {
+            sectionType: 'line',
             scrollHeight: 0,
             objs: {
 
@@ -107,7 +111,7 @@
                 objs.borderElm.style.transform = `translateX(-${(1 -calcValues(values.border_translate,currentYOffset)) * 100}%)`;
                 break;
             case 1:
-                
+                objs.lineContainerElm.style.opacity = `${calcValues(values.lineContainer_opacity, currentYOffset)}`;
                 break;
             case 2: 
                 
@@ -140,6 +144,7 @@
         window.addEventListener('scroll', () => {
             yOffset = pageYOffset;
             scrollLoop();
+            console.log(currentScene);
         
     });
     }
