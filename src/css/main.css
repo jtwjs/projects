@@ -103,7 +103,26 @@ body {
   overflow: hidden;
 }
 
-.home img {
+.home-title {
+  position: absolute;
+  top: calc(50% - 2rem);
+  width: 100%;
+  font-size: 5rem;
+  line-height: 4rem;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+
+  z-index: 20;
+}
+
+.background-images {
+  width: 100%;
+  height: 100%;
+}
+
+.background-images img {
   position: absolute;
 }
 
