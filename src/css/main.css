@@ -6,7 +6,7 @@ body {
 
 /* Header */
 #header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -123,6 +123,7 @@ section .container {
 .background-images {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .background-images img {
@@ -130,14 +131,14 @@ section .container {
 }
 
 .mountine1 {
-  bottom: 0;
+  bottom: -100px;
   right: 0;
   width: 1600px;
   z-index: 9;
 }
 
 .mountine2 {
-  bottom: 0;
+  bottom: -30px;
   left: 0;
   width: 1000px;
   z-index: 8;
@@ -192,14 +193,14 @@ section .container {
   padding-bottom: 0.5rem;
   font-size: 1.5rem;
   font-weight: 600;
+  overflow: hidden;
 }
 
-.title::after {
-  content: "";
+.border {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 30%;
+  width: 50%;
   height: 3px;
   background-color: #fff;
 }
@@ -211,4 +212,5 @@ section .container {
 
 .img-container img {
   width: 100%;
+  height: 100%;
 }
