@@ -14,7 +14,7 @@
                 borderElm: document.querySelector('.border'),
             },
             values: {
-                title_opacity: [0, 1, {start: 0, end: 0.5}],
+                title_opacity: [0, 1, {start: 0.2, end: 0.5}],
                 shadow_height: [0, 1, {start: 0, end: 0.5}],
                 aboutContainer_opacity: [0, 1, {start: 0.2, end: 0.5}],
                 aboutContainer_translateY: [0, 1, {start: 0.2, end: 0.5 }],
@@ -141,12 +141,17 @@
 
     function init() {
         setLayout();
+        window.addEventListener('load', () => {
+            setLayout();
+        })
+
         window.addEventListener('scroll', () => {
             yOffset = pageYOffset;
             scrollLoop();
             console.log(currentScene);
         
-    });
+        });
+    
     }
     init();
 })();

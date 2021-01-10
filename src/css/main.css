@@ -93,8 +93,13 @@ body {
 /* Home */
 .section {
   width: 100%;
+  min-height: 100vh;
+}
+
+.home {
   height: 100vh;
 }
+
 section .container {
   position: relative;
   width: 80%;
@@ -246,19 +251,20 @@ section .container {
   z-index: 2;
 }
 
-.section-line .title {
+.title-container .title {
   font-size: 1.5rem;
   font-weight: 400;
 }
 
-.section-line .title h2 {
+.title-container .title h2 {
   width: 80%;
   margin: 0 auto;
   border-top: 1.5px solid rgba(255, 255, 255, 0.7);
   padding-top: 1rem;
+  text-align: center;
 }
 
-.title-desc {
+.title-container .title-desc {
   margin-bottom: 1rem;
   font-size: 0.6rem;
   font-weight: 200;
@@ -269,3 +275,49 @@ section .container {
 }
 
 /* Gaellery */
+
+.gallery {
+  background-color: #f2f2f2;
+}
+
+.gallery .title-container {
+  margin-bottom: 3rem;
+}
+
+.gallery .title-container h2 {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.gallery .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 0;
+}
+
+.gallery .img-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-auto-rows: minmax(300px, 350px);
+  gap: 4rem;
+}
+
+.gallery .img-wrap {
+  border-radius: 5px;
+  padding: 1rem;
+  background-color: #fff;
+}
+
+.gallery .img-wrap img {
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+}
+
+/* Footer  */
+
+#footer {
+  width: 100%;
+  height: 30vh;
+  background: #151515;
+}
