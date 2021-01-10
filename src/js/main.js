@@ -26,9 +26,11 @@
             scrollHeight: 0,
             objs: {
                 lineContainerElm: document.querySelector('.section-line .container'),
+                galleryContainerElm: document.querySelector('.gallery .container'),
             },
             values: {
                 lineContainer_opacity: [0, 1, {start: 0.1, end: 0.3}],
+                galleryContainer_opacity: [0, 1, {start: 0.3, end: 0.8}],
             }
             
     }, {
@@ -112,6 +114,7 @@
                 break;
             case 1:
                 objs.lineContainerElm.style.opacity = `${calcValues(values.lineContainer_opacity, currentYOffset)}`;
+                objs.galleryContainerElm.style.opacity =`${calcValues(values.galleryContainer_opacity, currentYOffset)}`;
                 break;
             case 2: 
                 
@@ -149,7 +152,10 @@
             yOffset = pageYOffset;
             scrollLoop();
             console.log(currentScene);
-        
+        });
+
+        window.addEventListener('resize', () => {
+            setLayout();
         });
     
     }
