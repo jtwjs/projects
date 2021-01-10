@@ -162,3 +162,7 @@ dl {
   overflow: hidden;
   visibility: hidden;
 }
+
+* {
+  box-sizing: border-box;
+}
